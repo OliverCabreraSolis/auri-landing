@@ -1,0 +1,65 @@
+.final-cta {
+  padding: 8rem 5%;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.final-cta__title {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.final-cta__text {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.final-cta__form {
+  display: flex;
+  gap: 0.8rem;
+  max-width: 520px;
+  margin: 0 auto 1.2rem;
+}
+
+.final-cta__input {
+  flex: 1;
+  background-color: var(--bg-surface);
+  border: 2px solid var(--accent-secondary);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.4rem;
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.final-cta__input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 15px rgba(74, 159, 212, 0.2);
+}
+
+.final-cta__microcopy {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 580px) {
+  .final-cta__form {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .final-cta__input {
+    width: 100%;
+  }
+  .final-cta__title {
+    font-size: 2rem;
+  }
+  .final-cta {
+    padding: 5rem 5%;
+  }
+}

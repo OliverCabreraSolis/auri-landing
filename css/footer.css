@@ -1,0 +1,119 @@
+.site-footer {
+  background-color: #09131f; /* Un tono un poquito más oscuro que el fondo principal para dar cierre */
+  padding: 4rem 5% 2rem;
+  border-top: 1px solid rgba(106, 154, 184, 0.08);
+  font-family: var(--font-sans);
+}
+
+.site-footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.site-footer__logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-main);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.site-footer__tagline {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.site-footer__social-title {
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.8rem;
+  text-align: right;
+}
+
+.site-footer__social-links {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: flex-end;
+}
+
+.site-footer__social-links a {
+  color: var(--text-muted);
+  font-size: 1.4rem;
+  transition: var(--transition);
+}
+
+.site-footer__social-links a:hover {
+  color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.site-footer__divider {
+  border: 0;
+  height: 1px;
+  background: rgba(106, 154, 184, 0.08);
+  margin-bottom: 1.8rem;
+}
+
+.site-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.site-footer__copyright {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.site-footer__legal {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.site-footer__legal a {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.site-footer__legal a:hover {
+  color: var(--accent-primary);
+}
+
+/* Responsive para celulares */
+@media (max-width: 680px) {
+  .site-footer__top {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .site-footer__social-title {
+    text-align: center;
+  }
+  .site-footer__social-links {
+    justify-content: center;
+  }
+  .site-footer__bottom {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 1rem;
+  }
+  .site-footer__legal {
+    justify-content: center;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,14 @@
+:root {
+  /* Esquema de colores oficial de Auri */
+  --bg-main: #0d1b2a;         /* Fondo principal: Azul noche */
+  --bg-surface: #122336;      /* Superficies: Azul oscuro */
+  --accent-primary: #4a9fd4;  /* Acento primario: Azul métallique */
+  --accent-secondary: #2e6fad;/* Acento secundario: Azul medio */
+  --text-main: #e0f0ff;       /* Texto principal: Blanco frío */
+  --text-muted: #6a9ab8;      /* Texto secundario: Azul grisáceo */
+
+  /* Tipografía y estructura */
+  --font-sans: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
