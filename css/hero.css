@@ -53,41 +53,87 @@
 }
 
 /* El contenedor del Mockup */
+.hero {
+  padding: 5rem 5% 4rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero__badge {
+  background-color: var(--bg-surface);
+  color: var(--accent-primary);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(74, 159, 212, 0.15);
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.hero__title {
+  font-size: 3.2rem;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.hero__title em {
+  font-style: normal;
+  color: var(--accent-primary);
+  position: relative;
+}
+
+.hero__subtitle {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+
+.hero__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero__microcopy {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 4.5rem;
+}
+
+/* ==========================================
+   ACTUALIZADO: Contenedor de la Imagen Real 
+   ========================================== */
 .hero__visual {
   width: 100%;
-}
-
-.hero__visual-frame {
-  background-color: var(--bg-surface);
-  border-radius: var(--radius);
-  border: 1px solid rgba(106, 154, 184, 0.1);
-  padding: 5rem 2rem;
-  max-width: 640px;
+  max-width: 500px; /* Controla el tamaño de los celulares en pantalla */
   margin: 0 auto 1.2rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.hero__visual-placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
-  color: var(--text-muted);
 }
 
-.hero__visual-placeholder i {
-  font-size: 3.5rem;
-  color: var(--accent-primary);
-}
-
-.hero__visual-placeholder span {
-  font-size: 0.95rem;
-  font-weight: 500;
+/* Propiedades para que los teléfonos se adapten sin romperse */
+.hero__mockup {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  /* Opcional: un leve filtro de sombra suave para dar profundidad */
+  filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.4)); 
 }
 
 .hero__visual-caption {
   color: var(--text-muted);
   font-size: 0.9rem;
+  margin-top: 1rem;
+  opacity: 0.8;
 }
 
 /* Responsive para pantallas pequeñas */
@@ -103,5 +149,8 @@
   .hero__actions .btn-outline {
     width: 100%;
     max-width: 320px;
+  }
+  .hero__visual {
+    max-width: 85%; /* En celulares se hace un poquito más pequeña para que no sature */
   }
 }
