@@ -106,51 +106,60 @@
   font-size: 0.85rem;
   margin-bottom: 4.5rem;
 }
-
-/* ==========================================
-   ACTUALIZADO: Contenedor de la Imagen Real 
-   ========================================== */
+/* 1. El contenedor padre se vuelve un distribuidor horizontal */
 .hero__visual {
   width: 100%;
-  max-width: 500px; /* Controla el tamaño de los celulares en pantalla */
-  margin: 0 auto 1.2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 1100px;     /* Ampliamos el ancho total para que entren las 3 cosas */
+  margin: 4rem auto 0;
+  display: flex;         /* Activa el superpoder de alinear en fila */
+  align-items: center;   /* Centra los tres elementos verticalmente */
+  justify-content: space-between; /* Deja espacios equitativos entre columnas */
+  gap: 2rem;             /* Separación de seguridad entre columnas */
 }
 
-/* Propiedades para que los teléfonos se adapten sin romperse */
+/* 2. Estilo para los bloques de texto laterales */
+.hero__side-text {
+  flex: 1;               /* Hace que ambas columnas de texto midan exactamente lo mismo */
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Alineaciones individuales para que jueguen a favor del diseño */
+.hero__side-text--left {
+  text-align: right;     /* El texto izquierdo mira hacia el centro (los celulares) */
+}
+
+.hero__side-text--right {
+  text-align: left;      /* El texto derecho mira hacia el centro (los celulares) */
+  color: var(--accent-primary); /* Le da un toque de color diferente si quieres */
+}
+
+/* 3. Contenedor central fijado para que los celulares no se aplasten */
+.hero__mockup-container {
+  flex: 1.5;             /* Le damos un poquito más de espacio al centro que a los lados */
+  max-width: 420px;      /* Controla que los teléfonos no se vuelvan gigantes */
+}
+
 .hero__mockup {
   width: 100%;
   height: auto;
   object-fit: contain;
   display: block;
-  /* Opcional: un leve filtro de sombra suave para dar profundidad */
-  filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.4)); 
+  filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.5));
 }
 
-.hero__visual-caption {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  margin-top: 1rem;
-  opacity: 0.8;
-}
-
-/* Responsive para pantallas pequeñas */
-@media (max-width: 600px) {
-  .hero__title {
-    font-size: 2.2rem;
-  }
-  .hero__actions {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-  .hero__actions .btn-primary,
-  .hero__actions .btn-outline {
-    width: 100%;
-    max-width: 320px;
-  }
+/* 4. ¡Clave! En celulares no entran 3 columnas, así que las volvemos a poner una abajo de otra */
+@media (max-width: 768px) {
   .hero__visual {
-    max-width: 85%; /* En celulares se hace un poquito más pequeña para que no sature */
+    flex-direction: column; /* Apila los elementos en vertical */
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .hero__side-text--left, 
+  .hero__side-text--right {
+    text-align: center;    /* Centra los textos en pantallas chicas */
   }
 }
